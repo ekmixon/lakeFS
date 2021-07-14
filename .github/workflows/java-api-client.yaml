@@ -16,6 +16,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         # Extract the version to 'version' based on workflow_dispatch or triggered tag in the published event
+      - name: games
+        run: echo "${GITHUB_WORKSPACE}" && echo "$(shell pwd)"
       - name: Extract version
         shell: bash
         run: |
@@ -39,8 +41,6 @@ jobs:
           server-id: ossrh
           server-username: MAVEN_USERNAME
           server-password: MAVEN_PASSWORD
-      - name: games
-        run: echo "${GITHUB_WORKSPACE}" && echo "$(shell pwd)"
       - name: Build and publish package
         working-directory: clients/java
         run: GPG_TTY=$(tty) mvn --batch-mode deploy
