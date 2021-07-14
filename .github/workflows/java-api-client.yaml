@@ -39,6 +39,8 @@ jobs:
           server-id: ossrh
           server-username: MAVEN_USERNAME
           server-password: MAVEN_PASSWORD
+      - name: games
+        run: echo "${GITHUB_WORKSPACE}" && echo "$(shell pwd)"
       - name: Build and publish package
         working-directory: clients/java
         run: GPG_TTY=$(tty) mvn --batch-mode deploy
