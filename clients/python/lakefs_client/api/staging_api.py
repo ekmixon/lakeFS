@@ -40,12 +40,12 @@ class StagingApi(object):
         self.api_client = api_client
 
         def __get_physical_address(
-            self,
-            repository,
-            branch,
-            path,
-            **kwargs
-        ):
+                self,
+                repository,
+                branch,
+                path,
+                **kwargs
+            ):
             """get a physical address and a return token to write object to underlying storage  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -94,9 +94,7 @@ class StagingApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -105,11 +103,11 @@ class StagingApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['branch'] = \
-                branch
+                    branch
             kwargs['path'] = \
-                path
+                    path
             return self.call_with_http_info(**kwargs)
 
         self.get_physical_address = _Endpoint(
@@ -180,13 +178,13 @@ class StagingApi(object):
         )
 
         def __link_physical_address(
-            self,
-            repository,
-            branch,
-            path,
-            staging_metadata,
-            **kwargs
-        ):
+                self,
+                repository,
+                branch,
+                path,
+                staging_metadata,
+                **kwargs
+            ):
             """associate staging on this physical address with a path  # noqa: E501
 
             If the supplied token matches the current staging token, associate the object as the physical address with the supplied path.  Otherwise, if staging has been committed and the token has expired, return a conflict and hint where to place the object to try again.  Caller should copy the object to the new physical address and PUT again with the new staging token.  (No need to back off, this is due to losing the race against a concurrent commit operation.)   # noqa: E501
@@ -237,9 +235,7 @@ class StagingApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -248,13 +244,13 @@ class StagingApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['branch'] = \
-                branch
+                    branch
             kwargs['path'] = \
-                path
+                    path
             kwargs['staging_metadata'] = \
-                staging_metadata
+                    staging_metadata
             return self.call_with_http_info(**kwargs)
 
         self.link_physical_address = _Endpoint(

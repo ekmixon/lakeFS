@@ -41,11 +41,11 @@ class ActionsApi(object):
         self.api_client = api_client
 
         def __get_run(
-            self,
-            repository,
-            run_id,
-            **kwargs
-        ):
+                self,
+                repository,
+                run_id,
+                **kwargs
+            ):
             """get a run  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -93,9 +93,7 @@ class ActionsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -104,9 +102,9 @@ class ActionsApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['run_id'] = \
-                run_id
+                    run_id
             return self.call_with_http_info(**kwargs)
 
         self.get_run = _Endpoint(
@@ -171,12 +169,12 @@ class ActionsApi(object):
         )
 
         def __get_run_hook_output(
-            self,
-            repository,
-            run_id,
-            hook_run_id,
-            **kwargs
-        ):
+                self,
+                repository,
+                run_id,
+                hook_run_id,
+                **kwargs
+            ):
             """get run hook output  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -225,9 +223,7 @@ class ActionsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -236,11 +232,11 @@ class ActionsApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['run_id'] = \
-                run_id
+                    run_id
             kwargs['hook_run_id'] = \
-                hook_run_id
+                    hook_run_id
             return self.call_with_http_info(**kwargs)
 
         self.get_run_hook_output = _Endpoint(
@@ -312,10 +308,10 @@ class ActionsApi(object):
         )
 
         def __list_repository_runs(
-            self,
-            repository,
-            **kwargs
-        ):
+                self,
+                repository,
+                **kwargs
+            ):
             """list runs  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -366,9 +362,7 @@ class ActionsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -377,7 +371,7 @@ class ActionsApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             return self.call_with_http_info(**kwargs)
 
         self.list_repository_runs = _Endpoint(
@@ -462,11 +456,11 @@ class ActionsApi(object):
         )
 
         def __list_run_hooks(
-            self,
-            repository,
-            run_id,
-            **kwargs
-        ):
+                self,
+                repository,
+                run_id,
+                **kwargs
+            ):
             """list run hooks  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -516,9 +510,7 @@ class ActionsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -527,9 +519,9 @@ class ActionsApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['run_id'] = \
-                run_id
+                    run_id
             return self.call_with_http_info(**kwargs)
 
         self.list_run_hooks = _Endpoint(

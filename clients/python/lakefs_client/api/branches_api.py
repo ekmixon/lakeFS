@@ -44,11 +44,11 @@ class BranchesApi(object):
         self.api_client = api_client
 
         def __create_branch(
-            self,
-            repository,
-            branch_creation,
-            **kwargs
-        ):
+                self,
+                repository,
+                branch_creation,
+                **kwargs
+            ):
             """create branch  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -96,9 +96,7 @@ class BranchesApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -107,9 +105,9 @@ class BranchesApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['branch_creation'] = \
-                branch_creation
+                    branch_creation
             return self.call_with_http_info(**kwargs)
 
         self.create_branch = _Endpoint(
@@ -176,11 +174,11 @@ class BranchesApi(object):
         )
 
         def __delete_branch(
-            self,
-            repository,
-            branch,
-            **kwargs
-        ):
+                self,
+                repository,
+                branch,
+                **kwargs
+            ):
             """delete branch  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -228,9 +226,7 @@ class BranchesApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -239,9 +235,9 @@ class BranchesApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['branch'] = \
-                branch
+                    branch
             return self.call_with_http_info(**kwargs)
 
         self.delete_branch = _Endpoint(
@@ -306,11 +302,11 @@ class BranchesApi(object):
         )
 
         def __diff_branch(
-            self,
-            repository,
-            branch,
-            **kwargs
-        ):
+                self,
+                repository,
+                branch,
+                **kwargs
+            ):
             """diff branch  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -362,9 +358,7 @@ class BranchesApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -373,9 +367,9 @@ class BranchesApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['branch'] = \
-                branch
+                    branch
             return self.call_with_http_info(**kwargs)
 
         self.diff_branch = _Endpoint(
@@ -466,11 +460,11 @@ class BranchesApi(object):
         )
 
         def __get_branch(
-            self,
-            repository,
-            branch,
-            **kwargs
-        ):
+                self,
+                repository,
+                branch,
+                **kwargs
+            ):
             """get branch  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -518,9 +512,7 @@ class BranchesApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -529,9 +521,9 @@ class BranchesApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['branch'] = \
-                branch
+                    branch
             return self.call_with_http_info(**kwargs)
 
         self.get_branch = _Endpoint(
@@ -596,10 +588,10 @@ class BranchesApi(object):
         )
 
         def __list_branches(
-            self,
-            repository,
-            **kwargs
-        ):
+                self,
+                repository,
+                **kwargs
+            ):
             """list branches  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -649,9 +641,7 @@ class BranchesApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -660,7 +650,7 @@ class BranchesApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             return self.call_with_http_info(**kwargs)
 
         self.list_branches = _Endpoint(
@@ -740,12 +730,12 @@ class BranchesApi(object):
         )
 
         def __reset_branch(
-            self,
-            repository,
-            branch,
-            reset_creation,
-            **kwargs
-        ):
+                self,
+                repository,
+                branch,
+                reset_creation,
+                **kwargs
+            ):
             """reset branch  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -794,9 +784,7 @@ class BranchesApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -805,11 +793,11 @@ class BranchesApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['branch'] = \
-                branch
+                    branch
             kwargs['reset_creation'] = \
-                reset_creation
+                    reset_creation
             return self.call_with_http_info(**kwargs)
 
         self.reset_branch = _Endpoint(
@@ -881,12 +869,12 @@ class BranchesApi(object):
         )
 
         def __revert_branch(
-            self,
-            repository,
-            branch,
-            revert_creation,
-            **kwargs
-        ):
+                self,
+                repository,
+                branch,
+                revert_creation,
+                **kwargs
+            ):
             """revert  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -935,9 +923,7 @@ class BranchesApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -946,11 +932,11 @@ class BranchesApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['branch'] = \
-                branch
+                    branch
             kwargs['revert_creation'] = \
-                revert_creation
+                    revert_creation
             return self.call_with_http_info(**kwargs)
 
         self.revert_branch = _Endpoint(

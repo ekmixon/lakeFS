@@ -41,10 +41,10 @@ class RepositoriesApi(object):
         self.api_client = api_client
 
         def __create_repository(
-            self,
-            repository_creation,
-            **kwargs
-        ):
+                self,
+                repository_creation,
+                **kwargs
+            ):
             """create repository  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -92,9 +92,7 @@ class RepositoriesApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -103,7 +101,7 @@ class RepositoriesApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository_creation'] = \
-                repository_creation
+                    repository_creation
             return self.call_with_http_info(**kwargs)
 
         self.create_repository = _Endpoint(
@@ -168,10 +166,10 @@ class RepositoriesApi(object):
         )
 
         def __delete_repository(
-            self,
-            repository,
-            **kwargs
-        ):
+                self,
+                repository,
+                **kwargs
+            ):
             """delete repository  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -218,9 +216,7 @@ class RepositoriesApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -229,7 +225,7 @@ class RepositoriesApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             return self.call_with_http_info(**kwargs)
 
         self.delete_repository = _Endpoint(
@@ -288,10 +284,10 @@ class RepositoriesApi(object):
         )
 
         def __get_repository(
-            self,
-            repository,
-            **kwargs
-        ):
+                self,
+                repository,
+                **kwargs
+            ):
             """get repository  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -338,9 +334,7 @@ class RepositoriesApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -349,7 +343,7 @@ class RepositoriesApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             return self.call_with_http_info(**kwargs)
 
         self.get_repository = _Endpoint(
@@ -408,9 +402,9 @@ class RepositoriesApi(object):
         )
 
         def __list_repositories(
-            self,
-            **kwargs
-        ):
+                self,
+                **kwargs
+            ):
             """list repositories  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -458,9 +452,7 @@ class RepositoriesApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )

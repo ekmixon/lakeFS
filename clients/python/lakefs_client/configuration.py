@@ -276,9 +276,7 @@ conf = lakefs_client.Configuration(
 
         :return: The configuration object.
         """
-        if cls._default is not None:
-            return copy.deepcopy(cls._default)
-        return Configuration()
+        return Configuration() if cls._default is None else copy.deepcopy(cls._default)
 
     @property
     def logger_file(self):
@@ -376,9 +374,8 @@ conf = lakefs_client.Configuration(
             self.refresh_api_key_hook(self)
         key = self.api_key.get(identifier, self.api_key.get(alias) if alias is not None else None)
         if key:
-            prefix = self.api_key_prefix.get(identifier)
-            if prefix:
-                return "%s %s" % (prefix, key)
+            if prefix := self.api_key_prefix.get(identifier):
+                return f"{prefix} {key}"
             else:
                 return key
 
@@ -387,15 +384,11 @@ conf = lakefs_client.Configuration(
 
         :return: The token for basic HTTP authentication.
         """
-        username = ""
-        if self.username is not None:
-            username = self.username
-        password = ""
-        if self.password is not None:
-            password = self.password
-        return urllib3.util.make_headers(
-            basic_auth=username + ':' + password
-        ).get('authorization')
+        username = self.username if self.username is not None else ""
+        password = self.password if self.password is not None else ""
+        return urllib3.util.make_headers(basic_auth=f'{username}:{password}').get(
+            'authorization'
+        )
 
     def auth_settings(self):
         """Gets Auth Settings dict for api client.
@@ -425,8 +418,9 @@ conf = lakefs_client.Configuration(
                 'in': 'header',
                 'format': 'JWT',
                 'key': 'Authorization',
-                'value': 'Bearer ' + self.access_token
+                'value': f'Bearer {self.access_token}',
             }
+
         return auth
 
     def to_debug_report(self):
@@ -481,7 +475,7 @@ conf = lakefs_client.Configuration(
                 variable_name, variable['default_value'])
 
             if 'enum_values' in variable \
-                    and used_value not in variable['enum_values']:
+                        and used_value not in variable['enum_values']:
                 raise ValueError(
                     "The variable `{0}` in the host URL has invalid value "
                     "{1}. Must be {2}.".format(

@@ -39,11 +39,11 @@ class MetadataApi(object):
         self.api_client = api_client
 
         def __create_symlink_file(
-            self,
-            repository,
-            branch,
-            **kwargs
-        ):
+                self,
+                repository,
+                branch,
+                **kwargs
+            ):
             """creates symlink files corresponding to the given directory  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -92,9 +92,7 @@ class MetadataApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -103,9 +101,9 @@ class MetadataApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['branch'] = \
-                branch
+                    branch
             return self.call_with_http_info(**kwargs)
 
         self.create_symlink_file = _Endpoint(
@@ -175,11 +173,11 @@ class MetadataApi(object):
         )
 
         def __get_meta_range(
-            self,
-            repository,
-            meta_range,
-            **kwargs
-        ):
+                self,
+                repository,
+                meta_range,
+                **kwargs
+            ):
             """return URI to a meta-range file  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -227,9 +225,7 @@ class MetadataApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -238,9 +234,9 @@ class MetadataApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['meta_range'] = \
-                meta_range
+                    meta_range
             return self.call_with_http_info(**kwargs)
 
         self.get_meta_range = _Endpoint(
@@ -305,11 +301,11 @@ class MetadataApi(object):
         )
 
         def __get_range(
-            self,
-            repository,
-            range,
-            **kwargs
-        ):
+                self,
+                repository,
+                range,
+                **kwargs
+            ):
             """return URI to a range file  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -357,9 +353,7 @@ class MetadataApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -368,9 +362,9 @@ class MetadataApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['range'] = \
-                range
+                    range
             return self.call_with_http_info(**kwargs)
 
         self.get_range = _Endpoint(

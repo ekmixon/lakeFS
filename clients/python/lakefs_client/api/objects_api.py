@@ -42,12 +42,12 @@ class ObjectsApi(object):
         self.api_client = api_client
 
         def __delete_object(
-            self,
-            repository,
-            branch,
-            path,
-            **kwargs
-        ):
+                self,
+                repository,
+                branch,
+                path,
+                **kwargs
+            ):
             """delete object  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -96,9 +96,7 @@ class ObjectsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -107,11 +105,11 @@ class ObjectsApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['branch'] = \
-                branch
+                    branch
             kwargs['path'] = \
-                path
+                    path
             return self.call_with_http_info(**kwargs)
 
         self.delete_object = _Endpoint(
@@ -182,12 +180,12 @@ class ObjectsApi(object):
         )
 
         def __get_object(
-            self,
-            repository,
-            ref,
-            path,
-            **kwargs
-        ):
+                self,
+                repository,
+                ref,
+                path,
+                **kwargs
+            ):
             """get object content  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -236,9 +234,7 @@ class ObjectsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -247,11 +243,11 @@ class ObjectsApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['ref'] = \
-                ref
+                    ref
             kwargs['path'] = \
-                path
+                    path
             return self.call_with_http_info(**kwargs)
 
         self.get_object = _Endpoint(
@@ -323,12 +319,12 @@ class ObjectsApi(object):
         )
 
         def __get_underlying_properties(
-            self,
-            repository,
-            ref,
-            path,
-            **kwargs
-        ):
+                self,
+                repository,
+                ref,
+                path,
+                **kwargs
+            ):
             """get object properties on underlying storage  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -377,9 +373,7 @@ class ObjectsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -388,11 +382,11 @@ class ObjectsApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['ref'] = \
-                ref
+                    ref
             kwargs['path'] = \
-                path
+                    path
             return self.call_with_http_info(**kwargs)
 
         self.get_underlying_properties = _Endpoint(
@@ -463,11 +457,11 @@ class ObjectsApi(object):
         )
 
         def __list_objects(
-            self,
-            repository,
-            ref,
-            **kwargs
-        ):
+                self,
+                repository,
+                ref,
+                **kwargs
+            ):
             """list objects under a given prefix  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -519,9 +513,7 @@ class ObjectsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -530,9 +522,9 @@ class ObjectsApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['ref'] = \
-                ref
+                    ref
             return self.call_with_http_info(**kwargs)
 
         self.list_objects = _Endpoint(
@@ -623,13 +615,13 @@ class ObjectsApi(object):
         )
 
         def __stage_object(
-            self,
-            repository,
-            branch,
-            path,
-            object_stage_creation,
-            **kwargs
-        ):
+                self,
+                repository,
+                branch,
+                path,
+                object_stage_creation,
+                **kwargs
+            ):
             """stage an object\"s metadata for the given branch  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -679,9 +671,7 @@ class ObjectsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -690,13 +680,13 @@ class ObjectsApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['branch'] = \
-                branch
+                    branch
             kwargs['path'] = \
-                path
+                    path
             kwargs['object_stage_creation'] = \
-                object_stage_creation
+                    object_stage_creation
             return self.call_with_http_info(**kwargs)
 
         self.stage_object = _Endpoint(
@@ -774,12 +764,12 @@ class ObjectsApi(object):
         )
 
         def __stat_object(
-            self,
-            repository,
-            ref,
-            path,
-            **kwargs
-        ):
+                self,
+                repository,
+                ref,
+                path,
+                **kwargs
+            ):
             """get object metadata  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -828,9 +818,7 @@ class ObjectsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -839,11 +827,11 @@ class ObjectsApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['ref'] = \
-                ref
+                    ref
             kwargs['path'] = \
-                path
+                    path
             return self.call_with_http_info(**kwargs)
 
         self.stat_object = _Endpoint(
@@ -914,12 +902,12 @@ class ObjectsApi(object):
         )
 
         def __upload_object(
-            self,
-            repository,
-            branch,
-            path,
-            **kwargs
-        ):
+                self,
+                repository,
+                branch,
+                path,
+                **kwargs
+            ):
             """upload_object  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -971,9 +959,7 @@ class ObjectsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -982,11 +968,11 @@ class ObjectsApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['branch'] = \
-                branch
+                    branch
             kwargs['path'] = \
-                path
+                    path
             return self.call_with_http_info(**kwargs)
 
         self.upload_object = _Endpoint(

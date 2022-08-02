@@ -30,12 +30,11 @@ class LakeFSClient:
             try:
                 # prefix http scheme if missing
                 if not configuration.host.startswith('http://') and not configuration.host.startswith('https://'):
-                    configuration.host = 'http://' + configuration.host
+                    configuration.host = f'http://{configuration.host}'
                 # if 'host' not set any 'path', format the endpoint url with default 'path' based on the generated code
                 o = parse_url(configuration.host)
                 if not o.path or o.path == '/':
-                    settings = configuration.get_host_settings()
-                    if settings:
+                    if settings := configuration.get_host_settings():
                         base_path = parse_url(settings[0].get('url')).path
                         configuration.host = Url(scheme=o.scheme, auth=o.auth, host=o.host, port=o.port, path=base_path, query=o.query, fragment=o.fragment).url
             except ValueError:

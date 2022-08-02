@@ -41,10 +41,10 @@ class RetentionApi(object):
         self.api_client = api_client
 
         def __get_garbage_collection_rules(
-            self,
-            repository,
-            **kwargs
-        ):
+                self,
+                repository,
+                **kwargs
+            ):
             """get_garbage_collection_rules  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -91,9 +91,7 @@ class RetentionApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -102,7 +100,7 @@ class RetentionApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             return self.call_with_http_info(**kwargs)
 
         self.get_garbage_collection_rules = _Endpoint(
@@ -161,10 +159,10 @@ class RetentionApi(object):
         )
 
         def __prepare_garbage_collection_commits(
-            self,
-            repository,
-            **kwargs
-        ):
+                self,
+                repository,
+                **kwargs
+            ):
             """save lists of active and expired commits for garbage collection  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -212,9 +210,7 @@ class RetentionApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -223,7 +219,7 @@ class RetentionApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             return self.call_with_http_info(**kwargs)
 
         self.prepare_garbage_collection_commits = _Endpoint(
@@ -288,11 +284,11 @@ class RetentionApi(object):
         )
 
         def __set_garbage_collection_rules(
-            self,
-            repository,
-            garbage_collection_rules,
-            **kwargs
-        ):
+                self,
+                repository,
+                garbage_collection_rules,
+                **kwargs
+            ):
             """set_garbage_collection_rules  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -340,9 +336,7 @@ class RetentionApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -351,9 +345,9 @@ class RetentionApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['garbage_collection_rules'] = \
-                garbage_collection_rules
+                    garbage_collection_rules
             return self.call_with_http_info(**kwargs)
 
         self.set_garbage_collection_rules = _Endpoint(

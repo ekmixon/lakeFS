@@ -37,9 +37,9 @@ class HealthCheckApi(object):
         self.api_client = api_client
 
         def __health_check(
-            self,
-            **kwargs
-        ):
+                self,
+                **kwargs
+            ):
             """health_check  # noqa: E501
 
             check that the API server is up and running  # noqa: E501
@@ -85,9 +85,7 @@ class HealthCheckApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )

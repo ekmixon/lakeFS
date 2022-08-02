@@ -41,11 +41,11 @@ class TagsApi(object):
         self.api_client = api_client
 
         def __create_tag(
-            self,
-            repository,
-            tag_creation,
-            **kwargs
-        ):
+                self,
+                repository,
+                tag_creation,
+                **kwargs
+            ):
             """create tag  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -93,9 +93,7 @@ class TagsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -104,9 +102,9 @@ class TagsApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['tag_creation'] = \
-                tag_creation
+                    tag_creation
             return self.call_with_http_info(**kwargs)
 
         self.create_tag = _Endpoint(
@@ -172,11 +170,11 @@ class TagsApi(object):
         )
 
         def __delete_tag(
-            self,
-            repository,
-            tag,
-            **kwargs
-        ):
+                self,
+                repository,
+                tag,
+                **kwargs
+            ):
             """delete tag  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -224,9 +222,7 @@ class TagsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -235,9 +231,9 @@ class TagsApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['tag'] = \
-                tag
+                    tag
             return self.call_with_http_info(**kwargs)
 
         self.delete_tag = _Endpoint(
@@ -302,11 +298,11 @@ class TagsApi(object):
         )
 
         def __get_tag(
-            self,
-            repository,
-            tag,
-            **kwargs
-        ):
+                self,
+                repository,
+                tag,
+                **kwargs
+            ):
             """get tag  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -354,9 +350,7 @@ class TagsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -365,9 +359,9 @@ class TagsApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['tag'] = \
-                tag
+                    tag
             return self.call_with_http_info(**kwargs)
 
         self.get_tag = _Endpoint(
@@ -432,10 +426,10 @@ class TagsApi(object):
         )
 
         def __list_tags(
-            self,
-            repository,
-            **kwargs
-        ):
+                self,
+                repository,
+                **kwargs
+            ):
             """list tags  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -484,9 +478,7 @@ class TagsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -495,7 +487,7 @@ class TagsApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             return self.call_with_http_info(**kwargs)
 
         self.list_tags = _Endpoint(

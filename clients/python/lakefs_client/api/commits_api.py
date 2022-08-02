@@ -41,12 +41,12 @@ class CommitsApi(object):
         self.api_client = api_client
 
         def __commit(
-            self,
-            repository,
-            branch,
-            commit_creation,
-            **kwargs
-        ):
+                self,
+                repository,
+                branch,
+                commit_creation,
+                **kwargs
+            ):
             """create commit  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -95,9 +95,7 @@ class CommitsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -106,11 +104,11 @@ class CommitsApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['branch'] = \
-                branch
+                    branch
             kwargs['commit_creation'] = \
-                commit_creation
+                    commit_creation
             return self.call_with_http_info(**kwargs)
 
         self.commit = _Endpoint(
@@ -182,11 +180,11 @@ class CommitsApi(object):
         )
 
         def __get_commit(
-            self,
-            repository,
-            commit_id,
-            **kwargs
-        ):
+                self,
+                repository,
+                commit_id,
+                **kwargs
+            ):
             """get commit  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -234,9 +232,7 @@ class CommitsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -245,9 +241,9 @@ class CommitsApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['commit_id'] = \
-                commit_id
+                    commit_id
             return self.call_with_http_info(**kwargs)
 
         self.get_commit = _Endpoint(
@@ -312,11 +308,11 @@ class CommitsApi(object):
         )
 
         def __log_branch_commits(
-            self,
-            repository,
-            branch,
-            **kwargs
-        ):
+                self,
+                repository,
+                branch,
+                **kwargs
+            ):
             """get commit log from branch. Deprecated: replaced by logCommits by passing branch name as ref   # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -366,9 +362,7 @@ class CommitsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -377,9 +371,9 @@ class CommitsApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['branch'] = \
-                branch
+                    branch
             return self.call_with_http_info(**kwargs)
 
         self.log_branch_commits = _Endpoint(

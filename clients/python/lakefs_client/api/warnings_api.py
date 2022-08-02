@@ -39,9 +39,9 @@ class WarningsApi(object):
         self.api_client = api_client
 
         def __get_warnings(
-            self,
-            **kwargs
-        ):
+                self,
+                **kwargs
+            ):
             """get_warnings  # noqa: E501
 
             return all current \"global\" warnings to show user  # noqa: E501
@@ -87,9 +87,7 @@ class WarningsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )

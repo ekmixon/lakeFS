@@ -43,12 +43,12 @@ class RefsApi(object):
         self.api_client = api_client
 
         def __diff_refs(
-            self,
-            repository,
-            left_ref,
-            right_ref,
-            **kwargs
-        ):
+                self,
+                repository,
+                left_ref,
+                right_ref,
+                **kwargs
+            ):
             """diff references  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -103,9 +103,7 @@ class RefsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -114,11 +112,11 @@ class RefsApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['left_ref'] = \
-                left_ref
+                    left_ref
             kwargs['right_ref'] = \
-                right_ref
+                    right_ref
             return self.call_with_http_info(**kwargs)
 
         self.diff_refs = _Endpoint(
@@ -231,10 +229,10 @@ class RefsApi(object):
         )
 
         def __dump_refs(
-            self,
-            repository,
-            **kwargs
-        ):
+                self,
+                repository,
+                **kwargs
+            ):
             """Dump repository refs (tags, commits, branches) to object store  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -281,9 +279,7 @@ class RefsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -292,7 +288,7 @@ class RefsApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             return self.call_with_http_info(**kwargs)
 
         self.dump_refs = _Endpoint(
@@ -351,11 +347,11 @@ class RefsApi(object):
         )
 
         def __log_commits(
-            self,
-            repository,
-            ref,
-            **kwargs
-        ):
+                self,
+                repository,
+                ref,
+                **kwargs
+            ):
             """get commit log from ref  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -405,9 +401,7 @@ class RefsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -416,9 +410,9 @@ class RefsApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['ref'] = \
-                ref
+                    ref
             return self.call_with_http_info(**kwargs)
 
         self.log_commits = _Endpoint(
@@ -499,12 +493,12 @@ class RefsApi(object):
         )
 
         def __merge_into_branch(
-            self,
-            repository,
-            source_ref,
-            destination_branch,
-            **kwargs
-        ):
+                self,
+                repository,
+                source_ref,
+                destination_branch,
+                **kwargs
+            ):
             """merge references  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -554,9 +548,7 @@ class RefsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -565,11 +557,11 @@ class RefsApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['source_ref'] = \
-                source_ref
+                    source_ref
             kwargs['destination_branch'] = \
-                destination_branch
+                    destination_branch
             return self.call_with_http_info(**kwargs)
 
         self.merge_into_branch = _Endpoint(
@@ -646,11 +638,11 @@ class RefsApi(object):
         )
 
         def __restore_refs(
-            self,
-            repository,
-            refs_dump,
-            **kwargs
-        ):
+                self,
+                repository,
+                refs_dump,
+                **kwargs
+            ):
             """Restore repository refs (tags, commits, branches) from object store  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -698,9 +690,7 @@ class RefsApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -709,9 +699,9 @@ class RefsApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['repository'] = \
-                repository
+                    repository
             kwargs['refs_dump'] = \
-                refs_dump
+                    refs_dump
             return self.call_with_http_info(**kwargs)
 
         self.restore_refs = _Endpoint(

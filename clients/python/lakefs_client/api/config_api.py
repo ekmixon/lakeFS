@@ -42,9 +42,9 @@ class ConfigApi(object):
         self.api_client = api_client
 
         def __get_lake_fs_version(
-            self,
-            **kwargs
-        ):
+                self,
+                **kwargs
+            ):
             """get_lake_fs_version  # noqa: E501
 
             get version of lakeFS server  # noqa: E501
@@ -90,9 +90,7 @@ class ConfigApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -151,9 +149,9 @@ class ConfigApi(object):
         )
 
         def __get_storage_config(
-            self,
-            **kwargs
-        ):
+                self,
+                **kwargs
+            ):
             """get_storage_config  # noqa: E501
 
             retrieve lakeFS storage configuration  # noqa: E501
@@ -199,9 +197,7 @@ class ConfigApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -260,10 +256,10 @@ class ConfigApi(object):
         )
 
         def __setup(
-            self,
-            setup,
-            **kwargs
-        ):
+                self,
+                setup,
+                **kwargs
+            ):
             """setup lakeFS and create a first user  # noqa: E501
 
             This method makes a synchronous HTTP request by default. To make an
@@ -310,9 +306,7 @@ class ConfigApi(object):
             kwargs['_preload_content'] = kwargs.get(
                 '_preload_content', True
             )
-            kwargs['_request_timeout'] = kwargs.get(
-                '_request_timeout', None
-            )
+            kwargs['_request_timeout'] = kwargs.get('_request_timeout')
             kwargs['_check_input_type'] = kwargs.get(
                 '_check_input_type', True
             )
@@ -321,7 +315,7 @@ class ConfigApi(object):
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
             kwargs['setup'] = \
-                setup
+                    setup
             return self.call_with_http_info(**kwargs)
 
         self.setup = _Endpoint(
